@@ -11,7 +11,11 @@ service:
 istio:
   enabled: true
   host: "user-service"
-env: {}
+env:
+  SPRING_DATASOURCE_URL: "jdbc:postgresql://postgresql-user:5432/fitnest_user"
+  SPRING_DATASOURCE_USERNAME: "fitnest_user"
+  SPRING_DATASOURCE_PASSWORD: "user_password_123"
+  SPRING_JPA_HIBERNATE_DDL_AUTO: "update"
 resources:
   requests:
     cpu: 100m
