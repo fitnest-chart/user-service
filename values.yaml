@@ -20,6 +20,8 @@ env:
   SPRING_REDIS_PORT: "6379"
   SPRING_REDIS_PASSWORD: ""
   KAFKA_BOOTSTRAP_SERVERS: "kafka-service.fitnest-dev.svc.cluster.local:9092"
+  IAM_SERVICE_URL: "http://iam-service:8080"
+  MEDIA_SERVICE_URL: "http://media-service:8080"
 resources:
   requests:
     cpu: 100m
