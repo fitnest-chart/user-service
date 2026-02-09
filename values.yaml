@@ -13,6 +13,10 @@ istio:
   host: "user-service"
   mtls:
     mode: STRICT
+  authorization:
+    internalCallers:
+      - "cluster.local/ns/fitnest-dev/sa/iam-service"
+      - "cluster.local/ns/fitnest-dev/sa/payment-service"
 env:
   SPRING_PROFILES_ACTIVE: dev
   SPRING_DATASOURCE_URL: "jdbc:postgresql://postgresql-user.fitnest-dev.svc.cluster.local:5432/fitnest_user?sslmode=disable"
