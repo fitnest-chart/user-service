@@ -13,7 +13,7 @@ istio:
   host: "user-service"
 env:
   SPRING_PROFILES_ACTIVE: dev
-  SPRING_DATASOURCE_URL: "jdbc:postgresql://postgresql-user:5432/fitnest_user"
+  SPRING_DATASOURCE_URL: "jdbc:postgresql://postgresql-user.fitnest-dev.svc.cluster.local:5432/fitnest_user"
   SPRING_DATASOURCE_USERNAME: "fitnest_user"
   SPRING_DATASOURCE_PASSWORD: "user_password_123"
   SPRING_DATASOURCE_DRIVER_CLASS_NAME: "org.postgresql.Driver"
