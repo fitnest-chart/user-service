@@ -39,6 +39,7 @@ spec:
           - "/api/v1/files"
           - "/api/v1/files/**"
           - "/api/v1/languages"
+          - "/api/v1/languages/*"
           - "/api/v1/languages/**"
           - "/v3/api-docs/*"
           - "/v3/api-docs"
