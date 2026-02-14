@@ -47,20 +47,11 @@ spec:
           - "/actuator/health/*"
           - "/health"
 
-  # Allow goal endpoints
+  # Allow goal endpoints (RBAC enforced by application via @PreAuthorize)
   - to:
     - operation:
-        methods: ["GET"]
+        methods: ["GET", "POST", "PUT", "DELETE"]
         paths:
           - "/api/v1/goals"
           - "/api/v1/goals/**"
-  - to:
-    - operation:
-        methods: ["POST", "PUT", "DELETE"]
-        paths:
-          - "/api/v1/goals"
-          - "/api/v1/goals/**"
-    when:
-    - key: request.auth.claims[roles]
-      values: ["ROLE_ADMIN"]
 {{- end }}
