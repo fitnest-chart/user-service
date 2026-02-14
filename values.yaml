@@ -19,6 +19,8 @@ istio:
       - "cluster.local/ns/fitnest-dev/sa/payment-service"
       - "cluster.local/ns/fitnest-dev/sa/api-gateway"
       - "cluster.local/ns/fitnest-dev/sa/terabox-worker-service"
+jwt:
+  secret: "your-jwt-secret-change-in-production"
 env:
   SPRING_PROFILES_ACTIVE: dev
   SPRING_DATASOURCE_URL: "jdbc:postgresql://postgresql-user:5432/fitnest_user?sslmode=disable"

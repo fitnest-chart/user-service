@@ -34,8 +34,6 @@ spec:
           - "/api/v1/me/**"
           - "/api/v1/users/*"
           - "/api/v1/users/**"
-          - "/api/v1/goals"
-          - "/api/v1/goals/**"
           - "/api/v1/files"
           - "/api/v1/files/**"
           - "/api/v1/languages"
@@ -48,4 +46,21 @@ spec:
           - "/actuator/health"
           - "/actuator/health/*"
           - "/health"
+
+  # Allow goal endpoints
+  - to:
+    - operation:
+        methods: ["GET"]
+        paths:
+          - "/api/v1/goals"
+          - "/api/v1/goals/**"
+  - to:
+    - operation:
+        methods: ["POST", "PUT", "DELETE"]
+        paths:
+          - "/api/v1/goals"
+          - "/api/v1/goals/**"
+    when:
+    - key: request.auth.claims[roles]
+      values: ["ROLE_ADMIN"]
 {{- end }}
