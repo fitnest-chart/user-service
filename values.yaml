@@ -46,7 +46,6 @@ env:
   IDENTITY_SERVICE_URL: "http://identity-service:8080"
   JAVA_OPTS: "-XX:TieredStopAtLevel=1 -Xss256k -Xmx448m"
 resources:
-  enabled: true
   limits:
     memory: 512Mi
     cpu: 500m
