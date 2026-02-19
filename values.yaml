@@ -18,7 +18,7 @@ istio:
       - "cluster.local/ns/fitnest-dev/sa/identity-service"
       - "cluster.local/ns/fitnest-dev/sa/payment-service"
       - "cluster.local/ns/fitnest-dev/sa/api-gateway"
-      - "cluster.local/ns/fitnest-dev/sa/terabox-worker-service"
+      - "cluster.local/ns/fitnest-dev/sa/storage-service"
 hpa:
   enabled: false
   minReplicas: "1"
