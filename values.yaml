@@ -46,7 +46,7 @@ env:
   JWT_SECRET: "your-jwt-secret-change-in-production"
   JWT_ISSUER: "fitnest"
   IDENTITY_SERVICE_URL: "http://identity-service:8080"
-  JAVA_OPTS: "-Xmx480m -Xms256m -XX:+UseZGC -XX:+ZGenerational -Xss256k"
+  JAVA_OPTS: "-Xmx480m -Xms256m -XX:+UseZGC -Xss256k"
 resources:
   limits:
     memory: 512Mi
