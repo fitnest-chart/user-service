@@ -1,7 +1,7 @@
 replicaCount: 1
 image:
   repository: ghcr.io/fitnest-backend/user-service
-  tag: "development-1575f56"
+  tag: "development-f224c0b"
   pullPolicy: IfNotPresent
   imagePullSecrets:
     - name: ghcr-secret
@@ -47,7 +47,6 @@ env:
   JWT_ISSUER: "fitnest"
   IDENTITY_SERVICE_URL: "http://identity-service:8080"
   JAVA_TOOL_OPTIONS: "-XX:MaxRAMPercentage=70 -XX:InitialRAMPercentage=50 -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:+ParallelRefProcEnabled -XX:MaxMetaspaceSize=192m -Xss512k -XX:+ExitOnOutOfMemoryError"
-
 resources:
   limits:
     memory: 1024Mi
